@@ -1,0 +1,42 @@
+
+> ibero09@1.0.0 test
+> jest
+
+ POST: /usuarios/Registar
+    √ Debería retornar un mensaje de error si el nombre no es enviado (8 ms)
+    √ Debería retornar un mensaje de error si el email no es enviado (2 ms)
+    √ Debería retornar un mensaje de error si el password no es enviado (1 ms)
+    √ Debería retornar un mensaje de error si el email ya existe (3 ms)
+    √ Debería retornar un mensaje de error si el email no existe (1 ms)
+    √ Debería retornar un mensaje de éxito si el usuario es registrado correctamente (1 ms)
+    √ Debería retornar un mensaje de error si el usuario no es registrado correctamente (1 ms)
+  GET: /usuarios/ListarTodos
+    √ Debería retornar un mensaje de error si hay un error al listar los usuarios (1 ms)
+    √ Debería retornar un mensaje de éxito si los usuarios son listados correctamente (1 ms)
+  PUT: /usuarios/Actualizar
+    √ Debería retornar un mensaje de error si el nombre no es enviado (1 ms)
+    √ Debería retornar un mensaje de error si el email no es enviado
+    √ Debería retornar un mensaje de error si el usuario no existe (1 ms)
+    √ Debería retornar un mensaje de éxito si el usuario es actualizado correctamente (1 ms)
+    √ Debería retornar un mensaje de error si el usuario no es actualizado correctamente (1 ms)
+  POST: /usuarios/Borrar
+    √ Debería retornar un mensaje de error si el email no es enviado (1 ms)
+    √ Debería retornar un mensaje de error si el usuario no existe
+    √ Debería retornar un mensaje de éxito si el usuario es borrado correctamente (1 ms)
+    √ Debería retornar un mensaje de error si el usuario no es borrado correctamente (1 ms)
+  POST: /usuarios/Login
+    √ Debería retornar un mensaje de error si el email no es enviado (1 ms)
+    √ Debería retornar un mensaje de error si el password no es enviado (1 ms)
+    √ Debería retornar un mensaje de éxito si el usuario es logueado correctamente (1 ms)
+    √ Debería retornar un mensaje de error si el usuario no es logueado correctamente
+  GET: /usuarios/Activar
+    √ Debería retornar un mensaje de error si el email no es enviado
+    √ Debería retornar un mensaje de error si el código no es enviado (1 ms)
+    √ Debería retornar un mensaje de éxito si el usuario es activado correctamente (1 ms)
+    √ Debería retornar un mensaje de error si el usuario no es activado correctamente (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       26 passed, 26 total
+Snapshots:   0 total
+Time:        1.537 s, estimated 2 s
+Ran all test suites.
