@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
+/* const mongoose = require('mongoose'); */
 const productosController = require('../api/controladores/productosController').productosController;
-const productosModel = require('../api/modelos/usuariosModel').usuariosModel;
+/* const productosModel = require('../api/modelos/usuariosModel').usuariosModel; */
 
-jest.mock('../api/modelos/productosModel.js', () => {
+/* jest.mock('../api/modelos/productosModel.js', () => {
     return {
         productosModel: {
             Guardar: jest.fn((post, callback) => callback({ state: true })),
@@ -13,7 +13,7 @@ jest.mock('../api/modelos/productosModel.js', () => {
             Borrar: jest.fn((post, callback) => callback({ state: true }))
         }
     };
-});
+}); */
 
 describe('Validaciones de ProductosController', () => {
     let request, response;

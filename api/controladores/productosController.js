@@ -24,8 +24,8 @@ productosController.Guardar = function(request, response) {
         return response.json({state: false, mensaje: "El nombre no debe exceder los 100 caracteres"});
     }
 
-    if(!post.codigo || !/^[A-Z]{3}\d{3}$/.test(post.codigo)) {
-        return response.json({state: false, mensaje: "El código debe tener formato ABC123"});
+    if(!post.codigo) {
+        return response.json({state: false, mensaje: "El código es requerido"});
     }
 
     if(post.precio > 1000000) {

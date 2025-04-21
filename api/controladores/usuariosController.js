@@ -55,7 +55,7 @@ usuariosController.Registrar = function(request, response) {
                     to: post.email,
                     subject: 'Activación de cuenta',
                     text: `¡Registro exitoso!\n\nTu código de activación es: ${post.codigo}\n` +
-                          `Activa tu cuenta aquí: http://localhost:3000/usuarios/activar/${post.email}/${post.codigo}`
+                          `Activa tu cuenta aquí: ${config.urlreal}/usuarios/activar/${post.email}/${post.codigo}`
                 };
 
                 transporter.sendMail(mailOptions, (error) => {
@@ -88,33 +88,6 @@ usuariosController.ListarTodos = function (request, response) {
   };
 
 usuariosController.ListarUnico =  function(request, response) {
-    /* try {
-        const { email } = request.body;
-
-        if(!email) { // ← Corregido de 'lemail' a '!email'
-            return response.status(400).json({
-                estado: false,
-                mensaje: "El email es requerido"
-            });
-        }
-
-        const usuario = usuariosModel.findOne({ email });
-
-        if (!usuario) { // ← Lógica corregida
-            return response.status(404).json({
-                estado: false,
-                mensaje: "Usuario no encontrado"
-            });
-        }
-        
-        return response.json(usuario);
-    } catch (err) {
-        console.error('Error en ListarUnico:', err);
-        return response.status(500).json({ 
-            estado: false,
-            error: "Error interno del servidor"
-        });
-    } */
 
     var post = {
         email: request.body.email,
