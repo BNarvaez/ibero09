@@ -24,7 +24,7 @@ productosController.Guardar = function(request, response) {
         return response.json({state: false, mensaje: "El nombre no debe exceder los 100 caracteres"});
     }
 
-    if(!post.codigo) {
+    if(!post.codigo ) {
         return response.json({state: false, mensaje: "El código es requerido"});
     }
 
